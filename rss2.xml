@@ -9,7 +9,7 @@
     <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>不想再遗憾</description>
-    <pubDate>Sun, 21 Aug 2022 07:42:59 GMT</pubDate>
+    <pubDate>Mon, 22 Aug 2022 06:27:16 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -18,7 +18,15 @@
       <guid>http://example.com/2022/08/21/My-new-post/</guid>
       <pubDate>Sun, 21 Aug 2022 07:42:59 GMT</pubDate>
       
+        
+        
+      <description>&lt;p&gt;这是第一篇测试文章&lt;/p&gt;
+</description>
+        
       
+      
+      
+      <content:encoded><![CDATA[<p>这是第一篇测试文章</p>]]></content:encoded>
       
       
       
