@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #3988ff;
+  background: #fa77ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2385,7 +2385,7 @@ ul.breadcrumb li + li:last-child {
   border-bottom-color: #fc6423;
 }
 .sidebar {
-  background: var(--body-bg-color);
+  background: url("/images/sidebear.jpg");
   box-shadow: none;
   margin-top: 100%;
   position: static;
