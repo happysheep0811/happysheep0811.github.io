@@ -1,5 +1,4 @@
-.waifu { position:fixed; bottom:0; /* 设置右侧显示*/ right:0; z-index:1; font-size:0; -webkit-transform:translateY(3px); transform:translateY(3px) }
-
+#waifu-toggle {
 	background-color: #fa0;
 	border-radius: 5px;
 	bottom: 66px;
@@ -9,7 +8,7 @@
 	left: 0;
 	margin-left: -100px;
 	padding: 5px 2px 5px 5px;
-	position: right;
+	position: fixed;
 	transition: margin-left 1s;
 	width: 60px;
 	writing-mode: vertical-rl;
