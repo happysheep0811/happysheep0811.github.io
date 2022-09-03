@@ -9,8 +9,27 @@
     <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>再进步一点</description>
-    <pubDate>Mon, 22 Aug 2022 06:46:57 GMT</pubDate>
+    <pubDate>Sat, 03 Sep 2022 19:23:43 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>hexo中插入图片</title>
+      <link>http://example.com/2022/09/04/%E5%9B%BE%E7%89%87/</link>
+      <guid>http://example.com/2022/09/04/%E5%9B%BE%E7%89%87/</guid>
+      <pubDate>Sat, 03 Sep 2022 18:55:43 GMT</pubDate>
+      
+      <description>打开看到图片</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>一丶下载插件<br>  在博客根目录下git bash npm install hexo-asset-image –save<br>  修改老版本的文件<br>  node_modules –&gt; hexo-asset-image –&gt; index.js<br>  记事本打开：<br>  $(this).attr(‘src’, config.root + link + src);<br>  把这一行代码改成下面这样<br>  $(this).attr(‘src’, src);<br>  保存文件。<br>二丶更改站点配置<br>  打开站点配置文件并修改<br>  _config.yml中的 post_asset_folder: false<br>  改为true。<br>三丶插入图片<br>  在md编辑工具中使用md语法插入图片<br>  and<br>  在网页上预览<br>  结束~<br>注：<br>  这样设置下来在主页无法显示图片，会有一个显示错误的图标很难看，这里可以用预览来解决<br>  在文章编辑的头部加入<br>  description：XXX<br>  后面写上预览的部分，图片错误就会消失啦<br>  给文章加上预览的功能方法之一就是这样~</p><p><img src="1.jpg"></p>]]></content:encoded>
+      
+      
+      
+      
+      <comments>http://example.com/2022/09/04/%E5%9B%BE%E7%89%87/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>第一次尝试</title>
