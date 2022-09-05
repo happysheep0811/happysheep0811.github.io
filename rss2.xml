@@ -9,7 +9,7 @@
     <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>再进步一点</description>
-    <pubDate>Mon, 05 Sep 2022 01:30:42 GMT</pubDate>
+    <pubDate>Mon, 05 Sep 2022 01:39:56 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -18,10 +18,7 @@
       <guid>http://example.com/2022/09/04/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E5%A4%8D%E6%95%B0%E5%8F%8A%E5%85%B6%E8%A1%A8%E7%A4%BA/</guid>
       <pubDate>Sun, 04 Sep 2022 10:04:08 GMT</pubDate>
       
-        
-        
-      <description>&lt;p&gt;一丶复数和复变函数&lt;br&gt;  1.复数及其运算&lt;br&gt;  复数的表现形式有两种，一种是三角形式，一种是指数形式：&lt;br&gt;  三角形式：z&amp;#x3D;r（cosθ+isinθ）&lt;br&gt;  指数形式：$$z&amp;#x3D;re^iθ $$&lt;br&gt;  复数的乘法与除法:&lt;br&gt;  z</description>
-        
+      <description>复数的基本知识</description>
       
       
       
