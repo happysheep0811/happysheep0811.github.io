@@ -9,8 +9,31 @@
     <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>再进步一点</description>
-    <pubDate>Fri, 16 Sep 2022 09:35:47 GMT</pubDate>
+    <pubDate>Fri, 16 Sep 2022 09:49:01 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>java-数据类型</title>
+      <link>http://example.com/2022/09/16/java-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
+      <guid>http://example.com/2022/09/16/java-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
+      <pubDate>Fri, 16 Sep 2022 09:37:43 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;java 和 c++的数据类型略有些不同&lt;br&gt;java的部分数据类型如下：&lt;br&gt;&lt;mark&gt;byte&lt;/mark&gt;：&lt;/p&gt;
+&lt;p&gt;byte 数据类型是8位、有符号的，以二进制补码表示的整数；&lt;br&gt;最小值是 -128（-2^7）；&lt;br&gt;最大值是 127（2^7-1）</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>java 和 c++的数据类型略有些不同<br>java的部分数据类型如下：<br><mark>byte</mark>：</p><p>byte 数据类型是8位、有符号的，以二进制补码表示的整数；<br>最小值是 -128（-2^7）；<br>最大值是 127（2^7-1）；<br>默认值是 0；<br>byte 类型用在大型数组中节约空间，主要代替整数，因为 byte 变量占用的空间只有 int 类型的四分之一；<br>例子：byte a &#x3D; 100，byte b &#x3D; -50。</p><p><mark>short</mark>：</p><p>short 数据类型是 16 位、有符号的以二进制补码表示的整数<br>最小值是 -32768（-2^15）；<br>最大值是 32767（2^15 - 1）；<br>Short 数据类型也可以像 byte 那样节省空间。一个short变量是int型变量所占空间的二分之一；<br>默认值是 0；<br>例子：short s &#x3D; 1000，short r &#x3D; -20000。</p><p><mark>int</mark>：</p><p>int 数据类型是32位、有符号的以二进制补码表示的整数；<br>最小值是 -2,147,483,648（-2^31）；<br>最大值是 2,147,483,647（2^31 - 1）；<br>一般地整型变量默认为 int 类型；<br>默认值是 0 ；<br>例子：int a &#x3D; 100000, int b &#x3D; -200000。</p><p><mark>long</mark>：</p><p>long 数据类型是 64 位、有符号的以二进制补码表示的整数；<br>最小值是 -9,223,372,036,854,775,808（-2^63）；<br>最大值是 9,223,372,036,854,775,807（2^63 -1）；<br>这种类型主要使用在需要比较大整数的系统上；<br>默认值是 0L；<br>例子： long a &#x3D; 100000L，long b &#x3D; -200000L。<br>“L”理论上不分大小写，但是若写成”l”容易与数字”1”混淆，不容易分辩。所以最好大写。</p><p><mark>float</mark>：</p><p>float 数据类型是单精度、32位、符合IEEE 754标准的浮点数；<br>float 在储存大型浮点数组的时候可节省内存空间；<br>默认值是 0.0f；<br>浮点数不能用来表示精确的值，如货币；<br>例子：float f1 &#x3D; 234.5f。</p><p><mark>double</mark>：</p><p>double 数据类型是双精度、64 位、符合 IEEE 754 标准的浮点数；<br>浮点数的默认类型为 double 类型；<br>double类型同样不能表示精确的值，如货币；<br>默认值是 0.0d</p>]]></content:encoded>
+      
+      
+      
+      
+      <comments>http://example.com/2022/09/16/java-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>复变函数--解析函数</title>
