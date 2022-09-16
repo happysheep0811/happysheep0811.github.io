@@ -9,8 +9,32 @@
     <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>再进步一点</description>
-    <pubDate>Fri, 09 Sep 2022 11:19:50 GMT</pubDate>
+    <pubDate>Fri, 16 Sep 2022 09:35:47 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>复变函数--解析函数</title>
+      <link>http://example.com/2022/09/16/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/</link>
+      <guid>http://example.com/2022/09/16/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/</guid>
+      <pubDate>Fri, 16 Sep 2022 08:53:34 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;从知乎@sunny那拿的图，感谢；&lt;br&gt;&lt;img src=&quot;1.jpg&quot;&gt;;&lt;br&gt;&lt;img src=&quot;3.jpg&quot;&gt;;&lt;br&gt;&lt;img src=&quot;4.jpg&quot;&gt;;&lt;br&gt;&lt;img src=&quot;5.jpg&quot;&gt;;&lt;br&gt;&lt;img src=&quot;6.jpg&quot;&gt;;&lt;br&gt;&lt;img s</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>从知乎@sunny那拿的图，感谢；<br><img src="1.jpg">;<br><img src="3.jpg">;<br><img src="4.jpg">;<br><img src="5.jpg">;<br><img src="6.jpg">;<br><img src="7.jpg">;<br><img src="8.jpg">;<br><img src="9.jpg">;<br><img src="10.jpg">;<br><img src="11.jpg">;</p>]]></content:encoded>
+      
+      
+      <category domain="http://example.com/categories/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/">复变函数</category>
+      
+      
+      
+      <comments>http://example.com/2022/09/16/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>java-自动类型转换</title>
