@@ -10,5 +10,5 @@ http://example.com/resources/index.html
 http://example.com/about/index.html
 http://example.com/tags/index.html
 http://example.com/
-http://example.com/categories/java/
 http://example.com/categories/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/
+http://example.com/categories/java/
