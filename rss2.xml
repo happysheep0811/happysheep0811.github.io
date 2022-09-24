@@ -9,8 +9,60 @@
     <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>再进步一点</description>
-    <pubDate>Wed, 21 Sep 2022 09:41:04 GMT</pubDate>
+    <pubDate>Sat, 24 Sep 2022 06:43:44 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>力扣刷题--无重复字符最长字符串</title>
+      <link>http://example.com/2022/09/24/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E6%9C%80%E9%95%BF%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <guid>http://example.com/2022/09/24/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E6%9C%80%E9%95%BF%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <pubDate>Sat, 24 Sep 2022 06:32:27 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;题目描述：&lt;br&gt;&lt;img src=&quot;1.png&quot;&gt;&lt;br&gt;解题思路：&lt;br&gt;  一开始打算使用传统的数组方法，但是发现有点麻烦，想到之前使用过的哈希表法，在此同样&lt;br&gt;适用，因为既涉及到了值又涉及到了需要移动字符串开始比对的脚标。可以定义开始比对的位置&lt;br&gt;为star</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>题目描述：<br><img src="1.png"><br>解题思路：<br>  一开始打算使用传统的数组方法，但是发现有点麻烦，想到之前使用过的哈希表法，在此同样<br>适用，因为既涉及到了值又涉及到了需要移动字符串开始比对的脚标。可以定义开始比对的位置<br>为start，结束为end，在end不断向后移动的过程中会遇到与start~end区间相同的字符，此时<br>将此字符作为K-V的key值，获取value，然后更新start的位置，并且在原结果和新的结果之间选<br>择更大的一个来更新结果。<br>代码实现：</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">lengthOfLongestSubstring</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="type">int</span> max=<span class="number">0</span>;</span><br><span class="line">        HashMap&lt;Character,Integer&gt; map= <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;Character,Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> start=<span class="number">0</span>,end=<span class="number">0</span>;end&lt;s.length();end++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(s.charAt(end)))<span class="comment">//如果有相同的就更新start</span></span><br><span class="line">            start=Math.max(start,map.get(s.charAt(end))+<span class="number">1</span>);</span><br><span class="line">            map.put(s.charAt(end),end);</span><br><span class="line">            max=Math.max(max, end-start+<span class="number">1</span>);<span class="comment">//更新结果max</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="http://example.com/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98/">力扣刷题</category>
+      
+      
+      <category domain="http://example.com/tags/java/">java</category>
+      
+      
+      <comments>http://example.com/2022/09/24/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E6%9C%80%E9%95%BF%E5%AD%97%E7%AC%A6%E4%B8%B2/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>力扣刷题--两数相加</title>
+      <link>http://example.com/2022/09/24/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</link>
+      <guid>http://example.com/2022/09/24/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</guid>
+      <pubDate>Sat, 24 Sep 2022 06:21:54 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;题目描述：&lt;br&gt;&lt;img src=&quot;1.png&quot;&gt;&lt;br&gt;解题思路：&lt;br&gt;  由题目可知本题考查的是链表的相关知识点，我们要先新建一个链表来存储加法结果，此处难点&lt;br&gt;为当两个数相加大于10的进位。可以用求余取模等方法完成，最后记得最后一位是否要多1；&lt;br&gt;代码部分</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>题目描述：<br><img src="1.png"><br>解题思路：<br>  由题目可知本题考查的是链表的相关知识点，我们要先新建一个链表来存储加法结果，此处难点<br>为当两个数相加大于10的进位。可以用求余取模等方法完成，最后记得最后一位是否要多1；<br>代码部分：</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>&#123;</span><br><span class="line">  <span class="keyword">public</span> ListNode <span class="title function_">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span>&#123;</span><br><span class="line">      <span class="type">ListNode</span> <span class="variable">dummyNode</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(-<span class="number">1</span>);</span><br><span class="line">      <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> dummyNode;<span class="comment">//新建链表</span></span><br><span class="line">      <span class="type">int</span> <span class="variable">carry</span> <span class="operator">=</span> <span class="number">0</span>;<span class="comment">//初始化进位值</span></span><br><span class="line">      <span class="keyword">while</span>(l1 != <span class="literal">null</span> || l2 != <span class="literal">null</span>)&#123;<span class="comment">//判断只要还有一个串没读完就继续</span></span><br><span class="line">          <span class="type">int</span> x=(l1 == <span class="literal">null</span>) ? <span class="number">0</span> : l1.val;</span><br><span class="line">          <span class="type">int</span> y=(l2 == <span class="literal">null</span>) ? <span class="number">0</span> : l2.val;<span class="comment">//如果有就赋值，没有就给0</span></span><br><span class="line">          <span class="type">int</span> sum= x + y + carry;</span><br><span class="line">          carry = sum / <span class="number">10</span>;<span class="comment">//进位值</span></span><br><span class="line">          sum= sum % <span class="number">10</span>;<span class="comment">//除去进位值之后的数</span></span><br><span class="line">          cur.next = <span class="keyword">new</span> <span class="title class_">ListNode</span>(sum);</span><br><span class="line">          cur = cur.next;</span><br><span class="line">          <span class="keyword">if</span>(l1 != <span class="literal">null</span>) l1 = l1.next;</span><br><span class="line">          <span class="keyword">if</span>(l2 != <span class="literal">null</span>) l2 = l2.next;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span>(carry == <span class="number">1</span>)&#123;</span><br><span class="line">          cur.next = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">1</span>);<span class="comment">//如果最后一位相加超过10要额外进位</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> dummyNode.next;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="http://example.com/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98/">力扣刷题</category>
+      
+      
+      <category domain="http://example.com/tags/java/">java</category>
+      
+      
+      <comments>http://example.com/2022/09/24/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>力扣刷题--两数之和</title>
