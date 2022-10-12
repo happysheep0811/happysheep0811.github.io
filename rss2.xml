@@ -9,8 +9,34 @@
     <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>再进步一点</description>
-    <pubDate>Sat, 24 Sep 2022 06:43:44 GMT</pubDate>
+    <pubDate>Wed, 12 Oct 2022 14:32:22 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>真的掌握排序了吗</title>
+      <link>http://example.com/2022/10/12/java%E6%8E%92%E5%BA%8F/</link>
+      <guid>http://example.com/2022/10/12/java%E6%8E%92%E5%BA%8F/</guid>
+      <pubDate>Wed, 12 Oct 2022 14:21:50 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;在做实验时发现自己对排序方法仍然是一头雾水，于是在此对排序做个总结&lt;br&gt;一、选择排序&lt;br&gt;  思路：首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置。再从剩余未排&lt;br&gt;  序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。重复第二步，直到所有元素</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>在做实验时发现自己对排序方法仍然是一头雾水，于是在此对排序做个总结<br>一、选择排序<br>  思路：首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置。再从剩余未排<br>  序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。重复第二步，直到所有元素<br>  均排序完毕。<br>  如图：<br>  <img src="select.gif"><br>  代码实现：</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SelectionSort</span> <span class="keyword">implements</span> <span class="title class_">IArraySort</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="type">int</span>[] sort(<span class="type">int</span>[] sourceArray) <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">      <span class="type">int</span>[] arr = Arrays.copyOf(sourceArray, sourceArray.length);</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 总共要经过 N-1 轮比较</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">          <span class="type">int</span> <span class="variable">min</span> <span class="operator">=</span> i;</span><br><span class="line">          <span class="comment">// 每轮需要比较的次数 N-i</span></span><br><span class="line">          <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i + <span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">              <span class="keyword">if</span> (arr[j] &lt; arr[min]) &#123;</span><br><span class="line">                  <span class="comment">// 记录目前能找到的最小值元素的下标</span></span><br><span class="line">                  min = j;</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="comment">// 将找到的最小值和i位置所在的值进行交换</span></span><br><span class="line">          <span class="keyword">if</span> (i != min) &#123;</span><br><span class="line">              <span class="type">int</span> <span class="variable">tmp</span> <span class="operator">=</span> arr[i];</span><br><span class="line">              arr[i] = arr[min];</span><br><span class="line">              arr[min] = tmp;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> arr;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="http://example.com/categories/java/">java</category>
+      
+      
+      <category domain="http://example.com/tags/java/">java</category>
+      
+      
+      <comments>http://example.com/2022/10/12/java%E6%8E%92%E5%BA%8F/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>力扣刷题--无重复字符最长字符串</title>
