@@ -9,8 +9,34 @@
     <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>再进步一点</description>
-    <pubDate>Wed, 12 Oct 2022 14:32:22 GMT</pubDate>
+    <pubDate>Thu, 13 Oct 2022 14:49:35 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>java-冒泡排序</title>
+      <link>http://example.com/2022/10/13/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</link>
+      <guid>http://example.com/2022/10/13/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</guid>
+      <pubDate>Thu, 13 Oct 2022 14:43:07 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;接上一篇的选择排序，这篇是冒泡排序&lt;br&gt;  思路：&lt;br&gt;1)比较相邻的元素。如果第一个比第二个大，就交换它们两个。&lt;br&gt;2）对每一对相邻的元素都进行比较，等所有的比较完后最后一个数字是这堆数据里的最大数字。&lt;br&gt;3）重复步骤一，直到排序完成。&lt;br&gt;  &lt;img s</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>接上一篇的选择排序，这篇是冒泡排序<br>  思路：<br>1)比较相邻的元素。如果第一个比第二个大，就交换它们两个。<br>2）对每一对相邻的元素都进行比较，等所有的比较完后最后一个数字是这堆数据里的最大数字。<br>3）重复步骤一，直到排序完成。<br>  <img src="maopao.gif"><br>  代码实现：<br>  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;arr.length-<span class="number">1</span>;i++)&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;arr.length-i-<span class="number">1</span>;j++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(data[j]&gt;data[j+<span class="number">1</span>])&#123;</span><br><span class="line">      <span class="type">int</span> temp=data[j];</span><br><span class="line">      data[j]=data[j+<span class="number">1</span>];</span><br><span class="line">      data[j+<span class="number">1</span>]=temp;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>]]></content:encoded>
+      
+      
+      <category domain="http://example.com/categories/java/">java</category>
+      
+      
+      <category domain="http://example.com/tags/java/">java</category>
+      
+      
+      <comments>http://example.com/2022/10/13/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>真的掌握排序了吗</title>
@@ -227,29 +253,6 @@
       
       
       <comments>http://example.com/2022/09/04/%E5%9B%BE%E7%89%87/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>第一次尝试</title>
-      <link>http://example.com/2022/08/21/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%B0%9D%E8%AF%95/</link>
-      <guid>http://example.com/2022/08/21/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%B0%9D%E8%AF%95/</guid>
-      <pubDate>Sun, 21 Aug 2022 07:42:59 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;这是第一篇测试文章&lt;/p&gt;
-</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p>这是第一篇测试文章</p>]]></content:encoded>
-      
-      
-      
-      
-      <comments>http://example.com/2022/08/21/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%B0%9D%E8%AF%95/#disqus_thread</comments>
       
     </item>
     
