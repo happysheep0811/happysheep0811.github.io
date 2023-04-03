@@ -9,28 +9,30 @@
     <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>再进步一点</description>
-    <pubDate>Thu, 13 Oct 2022 14:49:35 GMT</pubDate>
+    <pubDate>Mon, 03 Apr 2023 03:09:23 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>java-冒泡排序</title>
-      <link>http://example.com/2022/10/13/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</link>
-      <guid>http://example.com/2022/10/13/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</guid>
-      <pubDate>Thu, 13 Oct 2022 14:43:07 GMT</pubDate>
+      <title>CTF PHP filter</title>
+      <link>http://example.com/2023/04/03/CTF-PHP-filter/</link>
+      <guid>http://example.com/2023/04/03/CTF-PHP-filter/</guid>
+      <pubDate>Mon, 03 Apr 2023 03:00:39 GMT</pubDate>
       
         
         
-      <description>&lt;p&gt;接上一篇的选择排序，这篇是冒泡排序&lt;br&gt;  思路：&lt;br&gt;1)比较相邻的元素。如果第一个比第二个大，就交换它们两个。&lt;br&gt;2）对每一对相邻的元素都进行比较，等所有的比较完后最后一个数字是这堆数据里的最大数字。&lt;br&gt;3）重复步骤一，直到排序完成。&lt;br&gt;  &lt;img s</description>
+      <description>&lt;p&gt;例题1：buuctf include&lt;br&gt;查看源码发现除了一个php之外没有东西，由include想到可能是php漏洞&lt;br&gt;知识点：&lt;br&gt;php:&amp;#x2F;&amp;#x2F;filter 可以伪协议文件包含读取源代码，加上read&amp;#x3D;convert.base64-</description>
         
       
       
       
-      <content:encoded><![CDATA[<p>接上一篇的选择排序，这篇是冒泡排序<br>  思路：<br>1)比较相邻的元素。如果第一个比第二个大，就交换它们两个。<br>2）对每一对相邻的元素都进行比较，等所有的比较完后最后一个数字是这堆数据里的最大数字。<br>3）重复步骤一，直到排序完成。<br>  <img src="maopao.gif"><br>  代码实现：<br>  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;arr.length-<span class="number">1</span>;i++)&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;arr.length-i-<span class="number">1</span>;j++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(data[j]&gt;data[j+<span class="number">1</span>])&#123;</span><br><span class="line">      <span class="type">int</span> temp=data[j];</span><br><span class="line">      data[j]=data[j+<span class="number">1</span>];</span><br><span class="line">      data[j+<span class="number">1</span>]=temp;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>例题1：buuctf include<br>查看源码发现除了一个php之外没有东西，由include想到可能是php漏洞<br>知识点：<br>php:&#x2F;&#x2F;filter 可以伪协议文件包含读取源代码，加上read&#x3D;convert.base64-encode，php中要<br>转为base64输出<br><img src="filter1.png"><br>构造payload：<br>?file&#x3D;php:&#x2F;&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resource&#x3D;flag.php<br>![](base64 res.png)<br>最后解码可得flag</p>]]></content:encoded>
       
       
       
+      <category domain="http://example.com/tags/PHP/">PHP</category>
       
-      <comments>http://example.com/2022/10/13/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/#disqus_thread</comments>
+      
+      <comments>http://example.com/2023/04/03/CTF-PHP-filter/#disqus_thread</comments>
       
     </item>
     
