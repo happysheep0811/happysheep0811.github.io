@@ -28,212 +28,9 @@
       <content:encoded><![CDATA[<p>接上一篇的选择排序，这篇是冒泡排序<br>  思路：<br>1)比较相邻的元素。如果第一个比第二个大，就交换它们两个。<br>2）对每一对相邻的元素都进行比较，等所有的比较完后最后一个数字是这堆数据里的最大数字。<br>3）重复步骤一，直到排序完成。<br>  <img src="maopao.gif"><br>  代码实现：<br>  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;arr.length-<span class="number">1</span>;i++)&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;arr.length-i-<span class="number">1</span>;j++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(data[j]&gt;data[j+<span class="number">1</span>])&#123;</span><br><span class="line">      <span class="type">int</span> temp=data[j];</span><br><span class="line">      data[j]=data[j+<span class="number">1</span>];</span><br><span class="line">      data[j+<span class="number">1</span>]=temp;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>]]></content:encoded>
       
       
-      <category domain="http://example.com/categories/java/">java</category>
-      
-      
-      <category domain="http://example.com/tags/java/">java</category>
       
       
       <comments>http://example.com/2022/10/13/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>真的掌握排序了吗</title>
-      <link>http://example.com/2022/10/12/java%E6%8E%92%E5%BA%8F/</link>
-      <guid>http://example.com/2022/10/12/java%E6%8E%92%E5%BA%8F/</guid>
-      <pubDate>Wed, 12 Oct 2022 14:21:50 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;在做实验时发现自己对排序方法仍然是一头雾水，于是在此对排序做个总结&lt;br&gt;一、选择排序&lt;br&gt;  思路：首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置。再从剩余未排&lt;br&gt;  序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。重复第二步，直到所有元素</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p>在做实验时发现自己对排序方法仍然是一头雾水，于是在此对排序做个总结<br>一、选择排序<br>  思路：首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置。再从剩余未排<br>  序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。重复第二步，直到所有元素<br>  均排序完毕。<br>  如图：<br>  <img src="select.gif"><br>  代码实现：</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SelectionSort</span> <span class="keyword">implements</span> <span class="title class_">IArraySort</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="type">int</span>[] sort(<span class="type">int</span>[] sourceArray) <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">      <span class="type">int</span>[] arr = Arrays.copyOf(sourceArray, sourceArray.length);</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 总共要经过 N-1 轮比较</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">          <span class="type">int</span> <span class="variable">min</span> <span class="operator">=</span> i;</span><br><span class="line">          <span class="comment">// 每轮需要比较的次数 N-i</span></span><br><span class="line">          <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i + <span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">              <span class="keyword">if</span> (arr[j] &lt; arr[min]) &#123;</span><br><span class="line">                  <span class="comment">// 记录目前能找到的最小值元素的下标</span></span><br><span class="line">                  min = j;</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="comment">// 将找到的最小值和i位置所在的值进行交换</span></span><br><span class="line">          <span class="keyword">if</span> (i != min) &#123;</span><br><span class="line">              <span class="type">int</span> <span class="variable">tmp</span> <span class="operator">=</span> arr[i];</span><br><span class="line">              arr[i] = arr[min];</span><br><span class="line">              arr[min] = tmp;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> arr;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
-      
-      
-      <category domain="http://example.com/categories/java/">java</category>
-      
-      
-      <category domain="http://example.com/tags/java/">java</category>
-      
-      
-      <comments>http://example.com/2022/10/12/java%E6%8E%92%E5%BA%8F/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>力扣刷题--无重复字符最长字符串</title>
-      <link>http://example.com/2022/09/24/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E6%9C%80%E9%95%BF%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
-      <guid>http://example.com/2022/09/24/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E6%9C%80%E9%95%BF%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
-      <pubDate>Sat, 24 Sep 2022 06:32:27 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;题目描述：&lt;br&gt;&lt;img src=&quot;1.png&quot;&gt;&lt;br&gt;解题思路：&lt;br&gt;  一开始打算使用传统的数组方法，但是发现有点麻烦，想到之前使用过的哈希表法，在此同样&lt;br&gt;适用，因为既涉及到了值又涉及到了需要移动字符串开始比对的脚标。可以定义开始比对的位置&lt;br&gt;为star</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p>题目描述：<br><img src="1.png"><br>解题思路：<br>  一开始打算使用传统的数组方法，但是发现有点麻烦，想到之前使用过的哈希表法，在此同样<br>适用，因为既涉及到了值又涉及到了需要移动字符串开始比对的脚标。可以定义开始比对的位置<br>为start，结束为end，在end不断向后移动的过程中会遇到与start~end区间相同的字符，此时<br>将此字符作为K-V的key值，获取value，然后更新start的位置，并且在原结果和新的结果之间选<br>择更大的一个来更新结果。<br>代码实现：</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">lengthOfLongestSubstring</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="type">int</span> max=<span class="number">0</span>;</span><br><span class="line">        HashMap&lt;Character,Integer&gt; map= <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;Character,Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> start=<span class="number">0</span>,end=<span class="number">0</span>;end&lt;s.length();end++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(s.charAt(end)))<span class="comment">//如果有相同的就更新start</span></span><br><span class="line">            start=Math.max(start,map.get(s.charAt(end))+<span class="number">1</span>);</span><br><span class="line">            map.put(s.charAt(end),end);</span><br><span class="line">            max=Math.max(max, end-start+<span class="number">1</span>);<span class="comment">//更新结果max</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
-      
-      
-      <category domain="http://example.com/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98/">力扣刷题</category>
-      
-      
-      <category domain="http://example.com/tags/java/">java</category>
-      
-      
-      <comments>http://example.com/2022/09/24/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E6%9C%80%E9%95%BF%E5%AD%97%E7%AC%A6%E4%B8%B2/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>力扣刷题--两数相加</title>
-      <link>http://example.com/2022/09/24/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</link>
-      <guid>http://example.com/2022/09/24/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</guid>
-      <pubDate>Sat, 24 Sep 2022 06:21:54 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;题目描述：&lt;br&gt;&lt;img src=&quot;1.png&quot;&gt;&lt;br&gt;解题思路：&lt;br&gt;  由题目可知本题考查的是链表的相关知识点，我们要先新建一个链表来存储加法结果，此处难点&lt;br&gt;为当两个数相加大于10的进位。可以用求余取模等方法完成，最后记得最后一位是否要多1；&lt;br&gt;代码部分</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p>题目描述：<br><img src="1.png"><br>解题思路：<br>  由题目可知本题考查的是链表的相关知识点，我们要先新建一个链表来存储加法结果，此处难点<br>为当两个数相加大于10的进位。可以用求余取模等方法完成，最后记得最后一位是否要多1；<br>代码部分：</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>&#123;</span><br><span class="line">  <span class="keyword">public</span> ListNode <span class="title function_">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span>&#123;</span><br><span class="line">      <span class="type">ListNode</span> <span class="variable">dummyNode</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(-<span class="number">1</span>);</span><br><span class="line">      <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> dummyNode;<span class="comment">//新建链表</span></span><br><span class="line">      <span class="type">int</span> <span class="variable">carry</span> <span class="operator">=</span> <span class="number">0</span>;<span class="comment">//初始化进位值</span></span><br><span class="line">      <span class="keyword">while</span>(l1 != <span class="literal">null</span> || l2 != <span class="literal">null</span>)&#123;<span class="comment">//判断只要还有一个串没读完就继续</span></span><br><span class="line">          <span class="type">int</span> x=(l1 == <span class="literal">null</span>) ? <span class="number">0</span> : l1.val;</span><br><span class="line">          <span class="type">int</span> y=(l2 == <span class="literal">null</span>) ? <span class="number">0</span> : l2.val;<span class="comment">//如果有就赋值，没有就给0</span></span><br><span class="line">          <span class="type">int</span> sum= x + y + carry;</span><br><span class="line">          carry = sum / <span class="number">10</span>;<span class="comment">//进位值</span></span><br><span class="line">          sum= sum % <span class="number">10</span>;<span class="comment">//除去进位值之后的数</span></span><br><span class="line">          cur.next = <span class="keyword">new</span> <span class="title class_">ListNode</span>(sum);</span><br><span class="line">          cur = cur.next;</span><br><span class="line">          <span class="keyword">if</span>(l1 != <span class="literal">null</span>) l1 = l1.next;</span><br><span class="line">          <span class="keyword">if</span>(l2 != <span class="literal">null</span>) l2 = l2.next;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span>(carry == <span class="number">1</span>)&#123;</span><br><span class="line">          cur.next = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">1</span>);<span class="comment">//如果最后一位相加超过10要额外进位</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> dummyNode.next;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
-      
-      
-      <category domain="http://example.com/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98/">力扣刷题</category>
-      
-      
-      <category domain="http://example.com/tags/java/">java</category>
-      
-      
-      <comments>http://example.com/2022/09/24/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>力扣刷题--两数之和</title>
-      <link>http://example.com/2022/09/21/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</link>
-      <guid>http://example.com/2022/09/21/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</guid>
-      <pubDate>Wed, 21 Sep 2022 08:44:18 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;题目描述：&lt;br&gt;  &lt;img src=&quot;twonums.png&quot;&gt;&lt;br&gt;解题思路：&lt;br&gt;    题目不仅要求数组的数字相加而且要求返回下标，可以使用复杂度较低的哈希映射，下标和&lt;br&gt;数组的值存在着对应关系。且哈希表自带的方法也可以比较方便地利用，使解题简化&lt;br&gt;代</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p>题目描述：<br>  <img src="twonums.png"><br>解题思路：<br>    题目不仅要求数组的数字相加而且要求返回下标，可以使用复杂度较低的哈希映射，下标和<br>数组的值存在着对应关系。且哈希表自带的方法也可以比较方便地利用，使解题简化<br>代码部分：</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] twoSum(<span class="type">int</span>[] nums, <span class="type">int</span> target) &#123;</span><br><span class="line">        <span class="type">int</span> a[] = <span class="keyword">new</span> <span class="title class_">int</span> [<span class="number">2</span>];<span class="comment">//题目要求的返回数组，储存下标</span></span><br><span class="line">        Map&lt;Integer,Integer &gt; mp = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;Integer,Integer&gt;();<span class="comment">//哈希表初始化</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums.length;i++)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">v</span> <span class="operator">=</span> target - nums[i];<span class="comment">//要找的值</span></span><br><span class="line">            <span class="keyword">if</span>(mp.containsKey(v))&#123;<span class="comment">//判断要找的值是否存在</span></span><br><span class="line">                a[<span class="number">0</span>] = mp.get(v);</span><br><span class="line">                a[<span class="number">1</span>] = i;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            mp.put(nums[i],i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>收获:<br>  初次上手使用哈希表，发现解决这种问题还挺好用的~<br>  这是第一篇刷题笔记，刷题是我们每个人的义！务！</p>]]></content:encoded>
-      
-      
-      <category domain="http://example.com/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98/">力扣刷题</category>
-      
-      
-      
-      <comments>http://example.com/2022/09/21/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>java-数据类型</title>
-      <link>http://example.com/2022/09/16/java-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
-      <guid>http://example.com/2022/09/16/java-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
-      <pubDate>Fri, 16 Sep 2022 09:37:43 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;java 和 c++的数据类型略有些不同&lt;br&gt;java的部分数据类型如下：&lt;br&gt;&lt;mark&gt;byte&lt;/mark&gt;：&lt;/p&gt;
-&lt;p&gt;byte 数据类型是8位、有符号的，以二进制补码表示的整数；&lt;br&gt;最小值是 -128（-2^7）；&lt;br&gt;最大值是 127（2^7-1）</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p>java 和 c++的数据类型略有些不同<br>java的部分数据类型如下：<br><mark>byte</mark>：</p><p>byte 数据类型是8位、有符号的，以二进制补码表示的整数；<br>最小值是 -128（-2^7）；<br>最大值是 127（2^7-1）；<br>默认值是 0；<br>byte 类型用在大型数组中节约空间，主要代替整数，因为 byte 变量占用的空间只有 int 类型的四分之一；<br>例子：byte a &#x3D; 100，byte b &#x3D; -50。</p><p><mark>short</mark>：</p><p>short 数据类型是 16 位、有符号的以二进制补码表示的整数<br>最小值是 -32768（-2^15）；<br>最大值是 32767（2^15 - 1）；<br>Short 数据类型也可以像 byte 那样节省空间。一个short变量是int型变量所占空间的二分之一；<br>默认值是 0；<br>例子：short s &#x3D; 1000，short r &#x3D; -20000。</p><p><mark>int</mark>：</p><p>int 数据类型是32位、有符号的以二进制补码表示的整数；<br>最小值是 -2,147,483,648（-2^31）；<br>最大值是 2,147,483,647（2^31 - 1）；<br>一般地整型变量默认为 int 类型；<br>默认值是 0 ；<br>例子：int a &#x3D; 100000, int b &#x3D; -200000。</p><p><mark>long</mark>：</p><p>long 数据类型是 64 位、有符号的以二进制补码表示的整数；<br>最小值是 -9,223,372,036,854,775,808（-2^63）；<br>最大值是 9,223,372,036,854,775,807（2^63 -1）；<br>这种类型主要使用在需要比较大整数的系统上；<br>默认值是 0L；<br>例子： long a &#x3D; 100000L，long b &#x3D; -200000L。<br>“L”理论上不分大小写，但是若写成”l”容易与数字”1”混淆，不容易分辩。所以最好大写。</p><p><mark>float</mark>：</p><p>float 数据类型是单精度、32位、符合IEEE 754标准的浮点数；<br>float 在储存大型浮点数组的时候可节省内存空间；<br>默认值是 0.0f；<br>浮点数不能用来表示精确的值，如货币；<br>例子：float f1 &#x3D; 234.5f。</p><p><mark>double</mark>：</p><p>double 数据类型是双精度、64 位、符合 IEEE 754 标准的浮点数；<br>浮点数的默认类型为 double 类型；<br>double类型同样不能表示精确的值，如货币；<br>默认值是 0.0d</p>]]></content:encoded>
-      
-      
-      
-      
-      <comments>http://example.com/2022/09/16/java-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>复变函数--解析函数</title>
-      <link>http://example.com/2022/09/16/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/</link>
-      <guid>http://example.com/2022/09/16/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/</guid>
-      <pubDate>Fri, 16 Sep 2022 08:53:34 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;从知乎@sunny那拿的图，感谢；&lt;br&gt;&lt;img src=&quot;1.jpg&quot;&gt;;&lt;br&gt;&lt;img src=&quot;3.jpg&quot;&gt;;&lt;br&gt;&lt;img src=&quot;4.jpg&quot;&gt;;&lt;br&gt;&lt;img src=&quot;5.jpg&quot;&gt;;&lt;br&gt;&lt;img src=&quot;6.jpg&quot;&gt;;&lt;br&gt;&lt;img s</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p>从知乎@sunny那拿的图，感谢；<br><img src="1.jpg">;<br><img src="3.jpg">;<br><img src="4.jpg">;<br><img src="5.jpg">;<br><img src="6.jpg">;<br><img src="7.jpg">;<br><img src="8.jpg">;<br><img src="9.jpg">;<br><img src="10.jpg">;<br><img src="11.jpg">;</p>]]></content:encoded>
-      
-      
-      <category domain="http://example.com/categories/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/">复变函数</category>
-      
-      
-      
-      <comments>http://example.com/2022/09/16/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>java-自动类型转换</title>
-      <link>http://example.com/2022/09/09/java/</link>
-      <guid>http://example.com/2022/09/09/java/</guid>
-      <pubDate>Fri, 09 Sep 2022 09:25:51 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;基本概述：&lt;/p&gt;
-&lt;p&gt;1.当java程序在进行赋值或运算时，精度小的类型自动转换为精度（容量）大的数据类型，这个就是自动类型转换。&lt;/p&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;数据类型按精度大小排序为：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;（1）char——&amp;gt;int——</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p>基本概述：</p><p>1.当java程序在进行赋值或运算时，精度小的类型自动转换为精度（容量）大的数据类型，这个就是自动类型转换。</p><ol start="2"><li>数据类型按精度大小排序为：</li></ol><p>（1）char——&gt;int——&gt;long——&gt;float——&gt;double</p><p>（2）byte——&gt;short——&gt;int——&gt;long——&gt;float——&gt;double</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">autoConvert</span> &#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    <span class="type">double</span> <span class="variable">d1</span> <span class="operator">=</span> <span class="number">80</span>;</span><br><span class="line">    System.out.println(num); <span class="comment">// 97</span></span><br><span class="line">    System.out.println(d1); <span class="comment">// 80.0</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>注意事项：</p><p>1.有多种类型的数据混合运算时，系统首先将所有数据转换成容量最大的那种数据类型，然后再进行计算。</p><p>2.当我们把精度（容量）大的数据类型赋值给精度（容量）小的数据类型，就会报错，反之则自动转换。</p><p>3.(byte,short)和char之间不会相互自动转换</p><p>4.byte,short,char它们三者可以计算，在计算时</p><p>5.boolean不参与转换</p><p>6.自动提升原则：表达式结果的类型自动提升为操作数中最大的类型</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> n1=<span class="number">10</span>;<span class="comment">//正确</span></span><br><span class="line"><span class="type">float</span> <span class="variable">d1</span> <span class="operator">=</span> n1 + <span class="number">1.1</span>;<span class="comment">//错，因为1.1为double类型由注意事项1知会转换为最大的类型此处</span></span><br><span class="line"><span class="comment">//为double(1.1默认为double)，而double不能转换为float（精度变小有数据丢失的风险）</span></span><br><span class="line"><span class="type">float</span> <span class="variable">d1</span> <span class="operator">=</span> n1 + <span class="number">1.1F</span>;<span class="comment">//正确，加上F之后1.1转换为了float类型</span></span><br><span class="line"><span class="type">byte</span> <span class="variable">b1</span> <span class="operator">=</span> <span class="number">127</span>;<span class="comment">//正确，-128-127</span></span><br><span class="line"><span class="type">char</span> <span class="variable">c1</span> <span class="operator">=</span> b1;<span class="comment">//错误，遇到变量判断类型，此处b1为byte类型不能自动转换为char</span></span><br></pre></td></tr></table></figure>]]></content:encoded>
-      
-      
-      <category domain="http://example.com/categories/java/">java</category>
-      
-      
-      
-      <comments>http://example.com/2022/09/09/java/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>复变函数——复数及其表示</title>
-      <link>http://example.com/2022/09/04/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E5%A4%8D%E6%95%B0%E5%8F%8A%E5%85%B6%E8%A1%A8%E7%A4%BA/</link>
-      <guid>http://example.com/2022/09/04/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E5%A4%8D%E6%95%B0%E5%8F%8A%E5%85%B6%E8%A1%A8%E7%A4%BA/</guid>
-      <pubDate>Sun, 04 Sep 2022 10:04:08 GMT</pubDate>
-      
-      <description>复数的基本知识</description>
-      
-      
-      
-      <content:encoded><![CDATA[<p>一丶复数和复变函数<br>  1.复数及其运算<br>  复数的表现形式有两种，一种是三角形式，一种是指数形式：<br>  三角形式：z&#x3D;r（cosθ+isinθ）<br>  指数形式：$$z&#x3D;re^iθ $$<br>  复数的乘法与除法:<br>  z1z2&#x3D;(x1x2-y1y2)+i(x1y2+x2y1)<br>  z1&#x2F;z2&#x3D;(x1x2+y1y2)&#x2F;(x2^2+y^2)+i(x2y1-x1y2)&#x2F;(x2^2+y^2)<br>  实际上复数除法是将分母实化的过程<br>  2.复数的模<br>  r&#x3D;\sqrt(x^2+y^2)<br>  3.共轭复数<br>  z和z共轭关于实轴对称<br>  z的模等于z的共轭的模<br>  zz的共轭&#x3D;z的模的平方<br>  z的共轭的共轭等于z<br>  z1+z2的共轭&#x3D;z1的共轭+z2的共轭<br>  z1z2的共轭&#x3D;z1的共轭z2的共轭，除法同理<br>  4.复数的辐角<br>  z的辐角Argz&#x3D;argz+2kΠ<br>  主辐角的范围 -Π&lt;argz&lt;&#x3D;Π<br>  主辐角的值：<br>  <img src="1.png"><br>  5.复数的三角表示<br>  <img src="2.png"><br>  6.复球面和无穷远点<br>  <img src="3.png"></p>]]></content:encoded>
-      
-      
-      <category domain="http://example.com/categories/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/">复变函数</category>
-      
-      
-      
-      <comments>http://example.com/2022/09/04/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E5%A4%8D%E6%95%B0%E5%8F%8A%E5%85%B6%E8%A1%A8%E7%A4%BA/#disqus_thread</comments>
       
     </item>
     
@@ -253,6 +50,29 @@
       
       
       <comments>http://example.com/2022/09/04/%E5%9B%BE%E7%89%87/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>第一次尝试</title>
+      <link>http://example.com/2022/08/21/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%B0%9D%E8%AF%95/</link>
+      <guid>http://example.com/2022/08/21/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%B0%9D%E8%AF%95/</guid>
+      <pubDate>Sun, 21 Aug 2022 07:42:59 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;这是第一篇测试文章&lt;/p&gt;
+</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>这是第一篇测试文章</p>]]></content:encoded>
+      
+      
+      
+      
+      <comments>http://example.com/2022/08/21/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%B0%9D%E8%AF%95/#disqus_thread</comments>
       
     </item>
     

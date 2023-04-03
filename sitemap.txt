@@ -1,13 +1,5 @@
 http://example.com/2022/10/13/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/
-http://example.com/2022/10/12/java%E6%8E%92%E5%BA%8F/
-http://example.com/2022/09/24/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E6%9C%80%E9%95%BF%E5%AD%97%E7%AC%A6%E4%B8%B2/
-http://example.com/2022/09/24/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/
-http://example.com/2022/09/21/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/
-http://example.com/2022/09/16/java-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/
-http://example.com/2022/09/16/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/
-http://example.com/2022/09/09/java/
 http://example.com/2022/09/04/%E5%9B%BE%E7%89%87/
-http://example.com/2022/09/04/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E5%A4%8D%E6%95%B0%E5%8F%8A%E5%85%B6%E8%A1%A8%E7%A4%BA/
 http://example.com/categories/index.html
 http://example.com/2022/08/21/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%B0%9D%E8%AF%95/
 http://example.com/categories/index-1.html
@@ -15,7 +7,3 @@ http://example.com/resources/index.html
 http://example.com/about/index.html
 http://example.com/tags/index.html
 http://example.com/
-http://example.com/tags/java/
-http://example.com/categories/java/
-http://example.com/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98/
-http://example.com/categories/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/
